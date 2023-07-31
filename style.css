@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.head{
+    text-align: center;
+    padding: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 5;
+}
+
+.card-Images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+}
+      
+.images{
+        width: 32%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        overflow: hidden;
+}
+
+.images img{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    object-fit: cover;
+    /* box-shadow: 0px 0px 20px #333; */
+}
+
+.images:hover{
+    transition: 0.4s;
+    transform: scale(1.03);
+    filter: drop-shadow(0px 0px 20px #333);
+}
+
+.images:hover img{
+    filter: grayscale(0%);
+    box-shadow: 0px 0px 20px #333;
+}
+
+.images{
+    position: relative;
+}
+
+.images figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    /* use https://cssgradient.io/ to generate gradient */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
+    font-family: 'Karla', sans-serif;
+}
+
+.images:hover figcaption{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
